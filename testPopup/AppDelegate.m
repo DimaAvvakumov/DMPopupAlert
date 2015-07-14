@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "DMPopupAlert.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self initPopupAlertAppereance];
+    
     return YES;
 }
 
@@ -40,6 +44,27 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Init appereance
+
+- (void)initPopupAlertAppereance {
+
+    [DMPopupAlert setColor:[UIColor redColor] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeError];
+    [DMPopupAlert setColor:[UIColor orangeColor] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeWarning];
+    [DMPopupAlert setColor:[UIColor greenColor] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeInfo];
+    
+    [DMPopupAlert setSize:CGSizeMake(30.0, 30.0) forParam:DMPopupCell_ImageSize];
+    [DMPopupAlert setPadding:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0) forParam:DMPopupCell_ImagePadding];
+    
+    [DMPopupAlert setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:17.0] forParam:DMPopupCell_TitleFont];
+    [DMPopupAlert setColor:[UIColor whiteColor] forParam:DMPopupCell_TitleColor];
+    [DMPopupAlert setPadding:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0) forParam:DMPopupCell_TitlePadding];
+
+    [DMPopupAlert setFont:[UIFont fontWithName:@"Helvetica" size:12.0] forParam:DMPopupCell_BodyFont];
+    [DMPopupAlert setColor:[UIColor whiteColor] forParam:DMPopupCell_BodyColor];
+    [DMPopupAlert setPadding:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0) forParam:DMPopupCell_TitlePadding];
+
 }
 
 @end

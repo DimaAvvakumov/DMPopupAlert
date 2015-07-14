@@ -17,4 +17,19 @@
 
 + (void)show:(DMPopupItem *)item inView:(UIView *)view;
 
+#pragma mark - Appereance
+
++ (void)setColor:(UIColor *)value forParam:(NSString *)paramName;
++ (void)setColor:(UIColor *)value forParam:(NSString *)paramName forType:(DMPopupType) popupType;
+
++ (void)setPadding:(UIEdgeInsets)value forParam:(NSString *)paramName;
++ (void)setPadding:(UIEdgeInsets)value forParam:(NSString *)paramName forType:(DMPopupType) popupType;
+
++ (void)setFont:(UIFont *)value forParam:(NSString *)paramName;
++ (void)setFont:(UIFont *)value forParam:(NSString *)paramName forType:(DMPopupType) popupType;
+
++ (void)setSize:(CGSize)value forParam:(NSString *)paramName;
++ (void)setSize:(CGSize)value forParam:(NSString *)paramName forType:(DMPopupType) popupType;
+
+
 @end

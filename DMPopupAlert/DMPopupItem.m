@@ -17,6 +17,8 @@
     self.title = nil;
     self.body = nil;
     
+    self.duration = 3.0;
+    
     self.type = DMPopupTypeInfo;
     
     return self;
