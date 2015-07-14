@@ -8,6 +8,10 @@
 
 #import "DMPopupAlertTableViewCell.h"
 
+@interface DMPopupAlertTableViewCell()
+
+@end
+
 @implementation DMPopupAlertTableViewCell
 
 - (void)awakeFromNib {
@@ -16,13 +20,19 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
 - (void)updateCellWithModel:(DMPopupItem *)model {
     self.titleLabel.text = model.title;
     self.bodyLabel.text = model.body;
+}
+
+- (IBAction)closeAction:(UIButton*)sender {
+    if (_closeBlock) {
+        _closeBlock(sender);
+    }
 }
 
 @end

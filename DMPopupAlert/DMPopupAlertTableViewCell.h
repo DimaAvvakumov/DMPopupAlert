@@ -12,10 +12,14 @@
 
 #define DMPopupAlertTableViewCell_ID @"DMPopupAlertTableViewCell_ID"
 
+typedef void (^DMPopupAlertTableViewCellCloseBlock)(UIButton *sender);
+
 @interface DMPopupAlertTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
+
+@property (copy, nonatomic) DMPopupAlertTableViewCellCloseBlock closeBlock;
 
 - (void)updateCellWithModel:(DMPopupItem *)model;
 

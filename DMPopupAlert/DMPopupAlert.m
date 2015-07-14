@@ -76,14 +76,33 @@
     [self.tableView beginUpdates];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
     [self.tableView endUpdates];
+    
+    // cell destruct timer
+    NSTimeInterval duration = 3.0;
+    NSDictionary *timerInfo = @{@"item":item};
+    NSTimer *timer = [NSTimer timerWithTimeInterval:duration target:self selector:@selector(destructCellByTimer:) userInfo:timerInfo repeats:NO];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    
 }
 
-- (void) updateTableViewHeight {
-    // update table height
-    self.tableViewHeightConstraint.constant = self.totalTableHeight;
+- (void)destructCellByTimer:(NSTimer*)timer {
+    DMPopupItem *item = [timer.userInfo objectForKey:@"item"];
     
-    // update layout
-    [self.view layoutIfNeeded];
+    [self destructCellByItem:item];
+}
+
+- (void)destructCellByItem:(DMPopupItem*)item {
+    NSInteger index = [self.dataItems indexOfObject:item];
+    if (index == NSNotFound) return;
+    
+    // remove from data items
+    [self.dataItems removeObjectAtIndex:index];
+    
+    // update table data
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    [self.tableView beginUpdates];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView endUpdates];
 }
 
 #pragma mark - UITableView methods
@@ -133,7 +152,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DMPopupItem *model = [self.dataItems objectAtIndex:indexPath.row];
+    __block DMPopupItem *model = [self.dataItems objectAtIndex:indexPath.row];
     
     return [self tableCellHeightByItem:model];
 }
@@ -142,8 +161,14 @@
     
     DMPopupItem *model = [self.dataItems objectAtIndex:indexPath.row];
     
+    // weak self
+    __weak typeof (self) weakSelf = self;
+    
     DMPopupAlertTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DMPopupAlertTableViewCell_ID forIndexPath:indexPath];
     [cell updateCellWithModel:model];
+    cell.closeBlock = ^(UIButton *sender) {
+        [weakSelf destructCellByItem:model];
+    };
     
     return cell;
 }

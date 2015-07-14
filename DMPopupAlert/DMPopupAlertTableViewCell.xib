@@ -24,6 +24,15 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I91-6R-iVX">
+                        <rect key="frame" x="270" y="13" width="40" height="30"/>
+                        <state key="normal" title="Close">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="closeAction:" destination="hDv-cY-XnH" eventType="touchUpInside" id="CJG-G4-BCw"/>
+                        </connections>
+                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qii-NB-nNh" userLabel="View - Separator">
                         <rect key="frame" x="10" y="54" width="300" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,9 +43,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="qii-NB-nNh" secondAttribute="bottom" id="7hf-33-UVe"/>
+                    <constraint firstAttribute="trailing" secondItem="I91-6R-iVX" secondAttribute="trailing" constant="10" id="CFJ-uJ-pqm"/>
                     <constraint firstItem="s0R-q3-gyX" firstAttribute="top" secondItem="zeR-iw-k4b" secondAttribute="bottom" constant="5" id="EvB-vq-HeR"/>
                     <constraint firstItem="zeR-iw-k4b" firstAttribute="leading" secondItem="rOy-je-9aL" secondAttribute="leading" constant="44" id="Hcv-lm-VUf"/>
                     <constraint firstItem="zeR-iw-k4b" firstAttribute="top" secondItem="rOy-je-9aL" secondAttribute="top" constant="6" id="IPg-X5-QeP"/>
+                    <constraint firstAttribute="centerY" secondItem="I91-6R-iVX" secondAttribute="centerY" id="YJE-hL-sOL"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s0R-q3-gyX" secondAttribute="trailing" constant="14" id="aiK-5b-yHh"/>
                     <constraint firstItem="qii-NB-nNh" firstAttribute="leading" secondItem="rOy-je-9aL" secondAttribute="leading" constant="10" id="cLM-sJ-YvL"/>
                     <constraint firstItem="s0R-q3-gyX" firstAttribute="leading" secondItem="rOy-je-9aL" secondAttribute="leading" constant="44" id="jLf-xu-b5A"/>
