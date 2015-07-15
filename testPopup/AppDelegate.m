@@ -65,8 +65,31 @@
     [DMPopupAlert setFont:bodyFont forParam:DMPopupCell_BodyFont];
     [DMPopupAlert setColor:[UIColor whiteColor] forParam:DMPopupCell_BodyColor];
     
+    // standart
+//    [DMPopupAlert setCalculateHeightBlock:^float(float cellWidth, DMPopupItem *item) {
+//        CGFloat avaliableWidth = cellWidth - 56.0 - 40.0;
+//        CGSize maxSize = CGSizeMake(avaliableWidth, CGFLOAT_MAX);
+//        CGSize titleSize = CGSizeZero, bodySize = CGSizeZero;
+//        
+//        if (item.title) {
+//            titleSize = [item.title textSizeWithFont:titleFont size:maxSize options:NSStringDrawingUsesLineFragmentOrigin];
+//        }
+//        if (item.body) {
+//            bodySize = [item.body textSizeWithFont:bodyFont size:maxSize options:NSStringDrawingUsesLineFragmentOrigin];
+//        }
+//        
+//        CGFloat h = 6.0 + titleSize.height + 5.0 + bodySize.height + 6.0;
+//        if (h < 50.0) h = 50.0;
+//        
+//        return h;
+//    }];
+    
+    // set custom nib
+    [DMPopupAlert registerNib:[UINib nibWithNibName:@"PopupCell" bundle:nil]];
+    
+    // custom
     [DMPopupAlert setCalculateHeightBlock:^float(float cellWidth, DMPopupItem *item) {
-        CGFloat avaliableWidth = cellWidth - 56.0 - 40.0;
+        CGFloat avaliableWidth = cellWidth - 10.0 - 10.0;
         CGSize maxSize = CGSizeMake(avaliableWidth, CGFLOAT_MAX);
         CGSize titleSize = CGSizeZero, bodySize = CGSizeZero;
         
@@ -77,12 +100,11 @@
             bodySize = [item.body textSizeWithFont:bodyFont size:maxSize options:NSStringDrawingUsesLineFragmentOrigin];
         }
         
-        CGFloat h = 6.0 + titleSize.height + 5.0 + bodySize.height + 6.0;
-        if (h < 50.0) h = 50.0;
+        CGFloat h = 44.0 + titleSize.height + 4.0 + bodySize.height + 6.0;
         
         return h;
     }];
-
+    
 }
 
 @end

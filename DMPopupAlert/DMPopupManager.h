@@ -15,6 +15,8 @@
 
 @property (copy, nonatomic) DMPopupAlertHeightBlock heightBlock;
 
+@property (strong, nonatomic) UINib *registredNib;
+
 +(DMPopupManager *) sharedInstance;
 
 - (DMPopupAlert *)popupAlertForView:(UIView*)view;

@@ -19,6 +19,10 @@
 
 + (void)setCalculateHeightBlock:(DMPopupAlertHeightBlock)block;
 
+#pragma mark - Custom xib
+
++ (void) registerNib:(UINib *)nib;
+
 #pragma mark - Appereance
 
 + (void)setColor:(UIColor *)value forParam:(NSString *)paramName;

@@ -145,9 +145,16 @@
     tableView.translatesAutoresizingMaskIntoConstraints = NO;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.backgroundColor = [UIColor clearColor];
+    tableView.allowsSelection = NO;
     tableView.dataSource = self;
     tableView.delegate = self;
-    [tableView registerNib:[UINib nibWithNibName:@"DMPopupAlertTableViewCell" bundle:nil] forCellReuseIdentifier:DMPopupAlertTableViewCell_ID];
+    
+    // register nib
+    UINib *nib = [DMPopupManager sharedInstance].registredNib;
+    if (nib == nil) {
+        nib = [UINib nibWithNibName:@"DMPopupAlertTableViewCell" bundle:nil];
+    }
+    [tableView registerNib:nib forCellReuseIdentifier:DMPopupAlertTableViewCell_ID];
     
     // add to view
     [self.view addSubview:tableView];
@@ -211,6 +218,15 @@
 
 + (void)setCalculateHeightBlock:(DMPopupAlertHeightBlock)block {
     [DMPopupManager sharedInstance].heightBlock = block;
+}
+
+#pragma mark - Custom xib
+
++ (void) registerNib:(UINib *)nib {
+    if (nib == nil) return;
+    if (![nib isKindOfClass:[UINib class]]) return;
+    
+    [DMPopupManager sharedInstance].registredNib = nib;
 }
 
 #pragma mark - Appereance
