@@ -177,39 +177,19 @@
 #pragma mark - Appereance
 
 + (void)setColor:(UIColor *)value forParam:(NSString *)paramName {
-    [self setColor:value forParam:paramName forType:-1];
+    [DMPopupManager setColor:value forParam:paramName];
 }
 
 + (void)setColor:(UIColor *)value forParam:(NSString *)paramName forType:(DMPopupType) popupType {
-    if (value == nil) return;
-    if ([value isKindOfClass:[UIColor class]]) return;
-    
-}
-
-+ (void)setPadding:(UIEdgeInsets)value forParam:(NSString *)paramName {
-    [self setPadding:value forParam:paramName forType:-1];
-}
-
-+ (void)setPadding:(UIEdgeInsets)value forParam:(NSString *)paramName forType:(DMPopupType) popupType {
-    
+    [DMPopupManager setColor:value forParam:paramName forType:popupType];
 }
 
 + (void)setFont:(UIFont *)value forParam:(NSString *)paramName {
-    [self setFont:value forParam:paramName forType:-1];
+    [DMPopupManager setFont:value forParam:paramName];
 }
 
 + (void)setFont:(UIFont *)value forParam:(NSString *)paramName forType:(DMPopupType) popupType {
-    if (value == nil) return;
-    if ([value isKindOfClass:[UIFont class]]) return;
-    
-}
-
-+ (void)setSize:(CGSize)value forParam:(NSString *)paramName {
-    [self setSize:value forParam:paramName forType:-1];
-}
-
-+ (void)setSize:(CGSize)value forParam:(NSString *)paramName forType:(DMPopupType) popupType {
-    
+    [DMPopupManager setFont:value forParam:paramName forType:popupType];
 }
 
 @end

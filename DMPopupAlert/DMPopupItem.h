@@ -9,23 +9,18 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, DMPopupType) {
-    DMPopupTypeInfo = 1,
+    DMPopupTypeInfo,
     DMPopupTypeWarning,
     DMPopupTypeError
 };
 
 #define DMPopupCell_BackgroundColor @"BackgroundColor"
 
-#define DMPopupCell_ImageSize    @"ImageSize"
-#define DMPopupCell_ImagePadding @"ImagePadding"
-
 #define DMPopupCell_TitleFont    @"TitleFont"
 #define DMPopupCell_TitleColor   @"TitleColor"
-#define DMPopupCell_TitlePadding @"TitlePadding"
 
 #define DMPopupCell_BodyFont     @"BodyFont"
 #define DMPopupCell_BodyColor    @"BodyColor"
-#define DMPopupCell_BodyPadding  @"BodyPadding"
 
 
 @interface DMPopupItem : NSObject

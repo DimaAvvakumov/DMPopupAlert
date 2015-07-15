@@ -49,21 +49,16 @@
 #pragma mark - Init appereance
 
 - (void)initPopupAlertAppereance {
-
-    [DMPopupAlert setColor:[UIColor redColor] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeError];
-    [DMPopupAlert setColor:[UIColor orangeColor] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeWarning];
-    [DMPopupAlert setColor:[UIColor greenColor] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeInfo];
     
-    [DMPopupAlert setSize:CGSizeMake(30.0, 30.0) forParam:DMPopupCell_ImageSize];
-    [DMPopupAlert setPadding:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0) forParam:DMPopupCell_ImagePadding];
+    [DMPopupAlert setColor:[UIColor colorWithRed:240.0/255.0 green:91.0/255.0 blue:93.0/255.0 alpha:1.0] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeError];
+    [DMPopupAlert setColor:[UIColor colorWithRed:245.0/255.0 green:220.0/255.0 blue:6.0/255.0 alpha:1.0] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeWarning];
+    [DMPopupAlert setColor:[UIColor colorWithRed:187.0/255.0 green:221.0/255.0 blue:82.0/255.0 alpha:1.0] forParam:DMPopupCell_BackgroundColor forType:DMPopupTypeInfo];
     
-    [DMPopupAlert setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:17.0] forParam:DMPopupCell_TitleFont];
+    [DMPopupAlert setFont:[UIFont fontWithName:@"Helvetica" size:17.0] forParam:DMPopupCell_TitleFont];
     [DMPopupAlert setColor:[UIColor whiteColor] forParam:DMPopupCell_TitleColor];
-    [DMPopupAlert setPadding:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0) forParam:DMPopupCell_TitlePadding];
 
-    [DMPopupAlert setFont:[UIFont fontWithName:@"Helvetica" size:12.0] forParam:DMPopupCell_BodyFont];
+    [DMPopupAlert setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:12.0] forParam:DMPopupCell_BodyFont];
     [DMPopupAlert setColor:[UIColor whiteColor] forParam:DMPopupCell_BodyColor];
-    [DMPopupAlert setPadding:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0) forParam:DMPopupCell_TitlePadding];
 
 }
 

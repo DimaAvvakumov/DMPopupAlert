@@ -26,13 +26,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)tapAction:(id)sender {
+- (IBAction)errorAction:(id)sender {
     NSDate *date = [NSDate date];
     
     DMPopupItem *item = [DMPopupItem popupItemWithTitle:@"Test" andBody:[date description]];
+    item.type = DMPopupTypeError;
     
     [DMPopupAlert show:item inView:self.view];
+}
+
+- (IBAction)warningAction:(id)sender {
+    NSDate *date = [NSDate date];
     
+    DMPopupItem *item = [DMPopupItem popupItemWithTitle:@"Test" andBody:[date description]];
+    item.type = DMPopupTypeWarning;
+    
+    [DMPopupAlert show:item inView:self.view];
+}
+
+- (IBAction)successAction:(id)sender {
+    NSDate *date = [NSDate date];
+    
+    DMPopupItem *item = [DMPopupItem popupItemWithTitle:@"Test" andBody:[date description]];
+    item.type = DMPopupTypeInfo;
+    
+    [DMPopupAlert show:item inView:self.view];
 }
 
 @end

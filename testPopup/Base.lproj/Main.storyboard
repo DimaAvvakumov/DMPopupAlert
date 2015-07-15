@@ -17,23 +17,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcD-jM-K80">
-                                <rect key="frame" x="44" y="285" width="100" height="30"/>
+                                <rect key="frame" x="44" y="285" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4j8-Hy-8gr"/>
-                                    <constraint firstAttribute="width" constant="100" id="AfE-Si-ZkS"/>
+                                    <constraint firstAttribute="width" constant="80" id="AfE-Si-ZkS"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Error">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XkI-pg-FCE"/>
+                                    <action selector="errorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvK-hg-dDa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xm9-Wl-btJ">
+                                <rect key="frame" x="144" y="285" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ge6-r4-cpZ"/>
+                                    <constraint firstAttribute="width" constant="80" id="kjD-TZ-VbX"/>
+                                </constraints>
+                                <state key="normal" title="Warning">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="warningAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9G-Ev-R8n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hu6-A7-rnP">
+                                <rect key="frame" x="260" y="285" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="OMt-vi-paB"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ub9-ma-Ld5"/>
+                                </constraints>
+                                <state key="normal" title="Success">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="successAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rUY-kd-ruT"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Hu6-A7-rnP" firstAttribute="leading" secondItem="Xm9-Wl-btJ" secondAttribute="trailing" constant="36" id="2gq-Rs-HFv"/>
+                            <constraint firstItem="Xm9-Wl-btJ" firstAttribute="leading" secondItem="pcD-jM-K80" secondAttribute="trailing" constant="20" id="Hgt-Ks-aJW"/>
                             <constraint firstItem="pcD-jM-K80" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="44" id="N9e-Rz-6Lq"/>
+                            <constraint firstAttribute="centerY" secondItem="Hu6-A7-rnP" secondAttribute="centerY" id="cGk-hn-s0M"/>
                             <constraint firstAttribute="centerY" secondItem="pcD-jM-K80" secondAttribute="centerY" id="dFi-za-axN"/>
+                            <constraint firstAttribute="centerY" secondItem="Xm9-Wl-btJ" secondAttribute="centerY" id="uGF-uL-Mf0"/>
                         </constraints>
                     </view>
                 </viewController>
