@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, DMPopupType) {
 
 @class DMPopupItem;
 typedef float (^DMPopupAlertHeightBlock)(float cellWidth, DMPopupItem *item);
+typedef void (^DMPopupAlertTapBlock)(void);
 
 @interface DMPopupItem : NSObject
 
@@ -33,6 +34,8 @@ typedef float (^DMPopupAlertHeightBlock)(float cellWidth, DMPopupItem *item);
 @property (assign, nonatomic) NSTimeInterval duration;
 
 @property (assign, nonatomic) DMPopupType type;
+
+@property (copy, nonatomic) DMPopupAlertTapBlock tapBlock;
 
 + (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body;
 + (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body type:(DMPopupType)type;

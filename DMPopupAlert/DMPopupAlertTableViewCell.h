@@ -12,7 +12,7 @@
 
 #define DMPopupAlertTableViewCell_ID @"DMPopupAlertTableViewCell_ID"
 
-typedef void (^DMPopupAlertTableViewCellCloseBlock)(UIButton *sender);
+typedef void (^DMPopupAlertTableViewCellCloseBlock)(id sender);
 
 @interface DMPopupAlertTableViewCell : UITableViewCell
 

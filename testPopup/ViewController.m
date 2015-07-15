@@ -46,6 +46,12 @@
     
     DMPopupItem *item = [DMPopupItem popupItemWithTitle:@"Вы авторизовались" body:[date description] type:DMPopupTypeSuccess duration:3.0];
     item.type = DMPopupTypeSuccess;
+    item.tapBlock = ^(void) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hi!" message:@"All success" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+        [alertView show];
+        
+    };
     
     [DMPopupAlert show:item inView:self.view];
 }

@@ -12,6 +12,10 @@
 
 @interface DMPopupAlertTableViewCell()
 
+@property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
+
+@property (copy, nonatomic) DMPopupAlertTapBlock tapBlock;
+
 @end
 
 @implementation DMPopupAlertTableViewCell
@@ -28,6 +32,10 @@
     
     // apply body appereance
     [self awakeBodyLabel];
+    
+    // tap gesture
+    self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHandler:)];
+    [self.contentView addGestureRecognizer:_tapGestureRecognizer];
 }
 
 - (void)awakeTitleLabel {
@@ -85,6 +93,9 @@
     
     // apply body appereance
     [self updateTitleForType:type];
+    
+    // tap block
+    self.tapBlock = model.tapBlock;
 }
 
 - (void) updateIconForType:(DMPopupType) type {
@@ -154,6 +165,16 @@
 #pragma mark - Close action
 
 - (IBAction)closeAction:(UIButton*)sender {
+    if (_closeBlock) {
+        _closeBlock(sender);
+    }
+}
+
+- (void)tapHandler:(UITapGestureRecognizer *)sender {
+    if (_tapBlock == nil) return;
+    
+    _tapBlock();
+    
     if (_closeBlock) {
         _closeBlock(sender);
     }
