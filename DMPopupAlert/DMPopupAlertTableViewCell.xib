@@ -19,26 +19,26 @@
                             <constraint firstAttribute="width" constant="40" id="3FY-C7-AdI"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeR-iw-k4b" userLabel="Label - Title">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeR-iw-k4b" userLabel="Label - Title">
                         <rect key="frame" x="56" y="6" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-q3-gyX" userLabel="Label - Body">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-q3-gyX" userLabel="Label - Body">
                         <rect key="frame" x="56" y="32" width="31" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I91-6R-iVX" userLabel="Button - Close">
-                        <rect key="frame" x="272" y="8" width="40" height="40"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I91-6R-iVX" userLabel="Button - Close">
+                        <rect key="frame" x="280" y="0.0" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="1gZ-9I-B7b"/>
                             <constraint firstAttribute="height" constant="40" id="gz3-cJ-tJZ"/>
                         </constraints>
                         <state key="normal" title="Close">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
                             <action selector="closeAction:" destination="hDv-cY-XnH" eventType="touchUpInside" id="CJG-G4-BCw"/>
@@ -54,12 +54,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="I91-6R-iVX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zeR-iw-k4b" secondAttribute="trailing" constant="8" id="3CG-RT-bg6"/>
-                    <constraint firstItem="I91-6R-iVX" firstAttribute="top" secondItem="rOy-je-9aL" secondAttribute="top" constant="8" id="3vJ-QB-fSe"/>
+                    <constraint firstItem="I91-6R-iVX" firstAttribute="top" secondItem="rOy-je-9aL" secondAttribute="top" id="3vJ-QB-fSe"/>
                     <constraint firstItem="s0R-q3-gyX" firstAttribute="leading" secondItem="DjU-8G-ccB" secondAttribute="trailing" constant="8" id="78N-tC-MpS"/>
                     <constraint firstAttribute="bottom" secondItem="qii-NB-nNh" secondAttribute="bottom" id="7hf-33-UVe"/>
                     <constraint firstItem="zeR-iw-k4b" firstAttribute="leading" secondItem="DjU-8G-ccB" secondAttribute="trailing" constant="8" id="7mO-jl-Nfu"/>
                     <constraint firstItem="DjU-8G-ccB" firstAttribute="leading" secondItem="rOy-je-9aL" secondAttribute="leading" constant="8" id="A8D-Uq-EB6"/>
-                    <constraint firstAttribute="trailing" secondItem="I91-6R-iVX" secondAttribute="trailing" constant="8" id="CFJ-uJ-pqm"/>
+                    <constraint firstAttribute="trailing" secondItem="I91-6R-iVX" secondAttribute="trailing" id="CFJ-uJ-pqm"/>
                     <constraint firstItem="s0R-q3-gyX" firstAttribute="top" secondItem="zeR-iw-k4b" secondAttribute="bottom" constant="5" id="EvB-vq-HeR"/>
                     <constraint firstItem="zeR-iw-k4b" firstAttribute="leading" secondItem="rOy-je-9aL" secondAttribute="leading" constant="56" id="Hcv-lm-VUf"/>
                     <constraint firstItem="zeR-iw-k4b" firstAttribute="top" secondItem="rOy-je-9aL" secondAttribute="top" constant="6" id="IPg-X5-QeP"/>
@@ -84,6 +84,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="bodyLabel" destination="s0R-q3-gyX" id="AyV-M9-Kvp"/>
+                <outlet property="closeButton" destination="I91-6R-iVX" id="4Gu-xy-384"/>
                 <outlet property="iconImageView" destination="DjU-8G-ccB" id="bxQ-ij-lby"/>
                 <outlet property="titleLabel" destination="zeR-iw-k4b" id="7FF-ZP-U36"/>
             </connections>

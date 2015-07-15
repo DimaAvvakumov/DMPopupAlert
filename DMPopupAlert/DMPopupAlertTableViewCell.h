@@ -21,6 +21,8 @@ typedef void (^DMPopupAlertTableViewCellCloseBlock)(UIButton *sender);
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
 @property (copy, nonatomic) DMPopupAlertTableViewCellCloseBlock closeBlock;
 
 - (void)updateCellWithModel:(DMPopupItem *)model;

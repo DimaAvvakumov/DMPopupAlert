@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, DMPopupType) {
 #define DMPopupCell_BodyFont     @"BodyFont"
 #define DMPopupCell_BodyColor    @"BodyColor"
 
+@class DMPopupItem;
+typedef float (^DMPopupAlertHeightBlock)(float cellWidth, DMPopupItem *item);
 
 @interface DMPopupItem : NSObject
 
@@ -32,6 +34,8 @@ typedef NS_ENUM(NSInteger, DMPopupType) {
 
 @property (assign, nonatomic) DMPopupType type;
 
-+ (DMPopupItem *) popupItemWithTitle:(NSString *)title andBody:(NSString *)body;
++ (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body;
++ (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body type:(DMPopupType)type;
++ (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body type:(DMPopupType)type duration:(NSTimeInterval)duration;
 
 @end

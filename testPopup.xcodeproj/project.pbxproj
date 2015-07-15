@@ -19,6 +19,7 @@
 		1893311E1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893311D1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m */; };
 		189331201B550D600061BA52 /* DMPopupAlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1893311F1B550D600061BA52 /* DMPopupAlertTableViewCell.xib */; };
 		189331231B550E910061BA52 /* DMPopupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 189331221B550E910061BA52 /* DMPopupManager.m */; };
+		18E52EB21B56517800F92118 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E52EB11B56517800F92118 /* NSString+TextSize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		1893311F1B550D600061BA52 /* DMPopupAlertTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMPopupAlertTableViewCell.xib; sourceTree = "<group>"; };
 		189331211B550E910061BA52 /* DMPopupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPopupManager.h; sourceTree = "<group>"; };
 		189331221B550E910061BA52 /* DMPopupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPopupManager.m; sourceTree = "<group>"; };
+		18E52EB01B56517800F92118 /* NSString+TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextSize.h"; sourceTree = "<group>"; };
+		18E52EB11B56517800F92118 /* NSString+TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextSize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 		189330E81B5508D60061BA52 /* testPopup */ = {
 			isa = PBXGroup;
 			children = (
+				18E52EAF1B56517800F92118 /* categories */,
 				189330ED1B5508D60061BA52 /* AppDelegate.h */,
 				189330EE1B5508D60061BA52 /* AppDelegate.m */,
 				189330F01B5508D60061BA52 /* ViewController.h */,
@@ -148,6 +152,15 @@
 				189331221B550E910061BA52 /* DMPopupManager.m */,
 			);
 			path = DMPopupAlert;
+			sourceTree = "<group>";
+		};
+		18E52EAF1B56517800F92118 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				18E52EB01B56517800F92118 /* NSString+TextSize.h */,
+				18E52EB11B56517800F92118 /* NSString+TextSize.m */,
+			);
+			path = categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189330F21B5508D60061BA52 /* ViewController.m in Sources */,
+				18E52EB21B56517800F92118 /* NSString+TextSize.m in Sources */,
 				189330EF1B5508D60061BA52 /* AppDelegate.m in Sources */,
 				189331231B550E910061BA52 /* DMPopupManager.m in Sources */,
 				1893311E1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m in Sources */,
@@ -454,6 +468,7 @@
 				1893310B1B5508D60061BA52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1893310C1B5508D60061BA52 /* Build configuration list for PBXNativeTarget "testPopupTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +477,7 @@
 				1893310E1B5508D60061BA52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

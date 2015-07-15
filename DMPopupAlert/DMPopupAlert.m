@@ -141,7 +141,14 @@
 }
 
 - (CGFloat)tableCellHeightByItem:(DMPopupItem*)item {
-    return 50.0;
+    CGFloat cellHeight = 50.0;
+    DMPopupAlertHeightBlock block = [DMPopupManager sharedInstance].heightBlock;
+    if (block) {
+        CGFloat cellWidth = self.view.bounds.size.width;
+        cellHeight = block(cellWidth, item);
+    }
+    
+    return cellHeight;
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
@@ -172,6 +179,12 @@
     };
     
     return cell;
+}
+
+#pragma mark - Calculate block
+
++ (void)setCalculateHeightBlock:(DMPopupAlertHeightBlock)block {
+    [DMPopupManager sharedInstance].heightBlock = block;
 }
 
 #pragma mark - Appereance

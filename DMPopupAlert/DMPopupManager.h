@@ -13,6 +13,8 @@
 
 @interface DMPopupManager : NSObject
 
+@property (copy, nonatomic) DMPopupAlertHeightBlock heightBlock;
+
 +(DMPopupManager *) sharedInstance;
 
 - (DMPopupAlert *)popupAlertForView:(UIView*)view;

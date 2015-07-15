@@ -24,10 +24,29 @@
     return self;
 }
 
-+ (DMPopupItem *) popupItemWithTitle:(NSString *)title andBody:(NSString *)body {
++ (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body {
     DMPopupItem *item = [[DMPopupItem alloc] init];
     item.title = title;
     item.body = body;
+    
+    return item;
+}
+
++ (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body type:(DMPopupType)type {
+    DMPopupItem *item = [[DMPopupItem alloc] init];
+    item.title = title;
+    item.body = body;
+    item.type = type;
+    
+    return item;
+}
+
++ (DMPopupItem *) popupItemWithTitle:(NSString *)title body:(NSString *)body type:(DMPopupType)type duration:(NSTimeInterval)duration {
+    DMPopupItem *item = [[DMPopupItem alloc] init];
+    item.title = title;
+    item.body = body;
+    item.type = type;
+    item.duration = duration;
     
     return item;
 }

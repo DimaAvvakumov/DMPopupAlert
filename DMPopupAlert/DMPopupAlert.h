@@ -17,6 +17,8 @@
 
 + (void)show:(DMPopupItem *)item inView:(UIView *)view;
 
++ (void)setCalculateHeightBlock:(DMPopupAlertHeightBlock)block;
+
 #pragma mark - Appereance
 
 + (void)setColor:(UIColor *)value forParam:(NSString *)paramName;
