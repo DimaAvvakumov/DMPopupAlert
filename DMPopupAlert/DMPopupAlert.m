@@ -59,8 +59,9 @@
     
     // restrict table height
     CGFloat totalHeight = self.totalTableHeight + [self tableCellHeightByItem:item];
-    if (totalHeight > 200.0) totalHeight = 200.0;
-    self.totalTableHeight = totalHeight;
+    if (totalHeight <= 200.0) {
+        self.totalTableHeight = totalHeight;
+    }
     
     // update table height
     self.tableViewHeightConstraint.constant = self.totalTableHeight;
@@ -99,11 +100,33 @@
     // remove from data items
     [self.dataItems removeObjectAtIndex:index];
     
+    // weak self
+    __weak typeof (self) weakSelf = self;
+    
     // update table data
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    [CATransaction begin];
     [self.tableView beginUpdates];
+    [CATransaction setCompletionBlock: ^{
+        [weakSelf performSelector:@selector(restructTableHeight) withObject:nil afterDelay:0.1];
+    }];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self.tableView endUpdates];
+    [CATransaction commit];
+}
+
+- (void)restructTableHeight {
+    CGFloat h = self.tableView.contentSize.height;
+    NSLog(@"h: %f", h);
+    if (h > self.totalTableHeight) return;
+    
+    self.totalTableHeight = h;
+    
+    // update table height
+    self.tableViewHeightConstraint.constant = self.totalTableHeight;
+    
+    // update layout
+    [self.view layoutIfNeeded];
 }
 
 #pragma mark - UITableView methods
