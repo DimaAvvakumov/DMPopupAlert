@@ -57,9 +57,12 @@
 
 - (void)_show:(DMPopupItem *)item inView:(UIView *)view {
     
+    // max height
+    CGFloat maxTableHeight = view.bounds.size.height * 0.8;
+    
     // restrict table height
     CGFloat totalHeight = self.totalTableHeight + [self tableCellHeightByItem:item];
-    if (totalHeight <= 200.0) {
+    if (totalHeight <= maxTableHeight) {
         self.totalTableHeight = totalHeight;
     }
     
@@ -117,7 +120,7 @@
 
 - (void)restructTableHeight {
     CGFloat h = self.tableView.contentSize.height;
-    NSLog(@"h: %f", h);
+    
     if (h > self.totalTableHeight) return;
     
     self.totalTableHeight = h;
