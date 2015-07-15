@@ -19,7 +19,7 @@
     
     self.duration = 3.0;
     
-    self.type = DMPopupTypeInfo;
+    self.type = DMPopupTypeSuccess;
     
     return self;
 }

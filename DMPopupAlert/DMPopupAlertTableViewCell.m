@@ -71,6 +71,9 @@
     // type
     DMPopupType type = model.type;
     
+    // apply icon
+    [self updateIconForType:type];
+    
     // apply background
     [self updateBackgroundForType:type];
     
@@ -79,6 +82,24 @@
     
     // apply body appereance
     [self updateTitleForType:type];
+}
+
+- (void) updateIconForType:(DMPopupType) type {
+    // image
+    UIImage *image = nil;
+    if (type == DMPopupTypeError) {
+        image = [self errorIconWithColor:[UIColor whiteColor]];
+    }
+    if (type == DMPopupTypeWarning) {
+        image = [self warningIconWithColor:[UIColor whiteColor]];
+    }
+    if (type == DMPopupTypeSuccess) {
+        image = [self successIconWithColor:[UIColor whiteColor]];
+    }
+    
+    if (image) {
+        self.iconImageView.image = image;
+    }
 }
 
 - (void) updateBackgroundForType:(DMPopupType) type {
@@ -123,6 +144,101 @@
     if (_closeBlock) {
         _closeBlock(sender);
     }
+}
+
+#pragma mark - Icon methods
+
+- (UIImage *) errorIconWithColor:(UIColor *)color {
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(40.0, 40.0), NO, 0.0);
+    
+    //// Group
+    {
+        //// Rectangle 2 Drawing
+        UIBezierPath* rectangle2Path = UIBezierPath.bezierPath;
+        [rectangle2Path moveToPoint: CGPointMake(9.5, 25.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(16.5, 32.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(26.5, 32.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(33.5, 25.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(33.5, 15.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(26.5, 8.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(16.5, 8.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(9.5, 15.5)];
+        [rectangle2Path addLineToPoint: CGPointMake(9.5, 25.5)];
+        [rectangle2Path closePath];
+        [color setStroke];
+        rectangle2Path.lineWidth = 1;
+        [rectangle2Path stroke];
+        
+        
+        //// Bezier Drawing
+        UIBezierPath* bezierPath = UIBezierPath.bezierPath;
+        [bezierPath moveToPoint: CGPointMake(16.5, 15.5)];
+        [bezierPath addLineToPoint: CGPointMake(26.5, 25.5)];
+        bezierPath.lineCapStyle = kCGLineCapSquare;
+        
+        [color setStroke];
+        bezierPath.lineWidth = 1;
+        [bezierPath stroke];
+        
+        
+        //// Bezier 2 Drawing
+        UIBezierPath* bezier2Path = UIBezierPath.bezierPath;
+        [bezier2Path moveToPoint: CGPointMake(16.5, 25.5)];
+        [bezier2Path addLineToPoint: CGPointMake(26.5, 15.5)];
+        bezier2Path.lineCapStyle = kCGLineCapSquare;
+        
+        [color setStroke];
+        bezier2Path.lineWidth = 1;
+        [bezier2Path stroke];
+    }
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+- (UIImage *) warningIconWithColor:(UIColor *)color {
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(40.0, 40.0), NO, 0.0);
+    
+    //// Group
+    {
+        //// Graphic Многоугольник 1 Drawing
+        UIBezierPath* graphic1Path = UIBezierPath.bezierPath;
+        [graphic1Path moveToPoint: CGPointMake(21.5, 7.5)];
+        [graphic1Path addLineToPoint: CGPointMake(39.5, 35.5)];
+        [graphic1Path addLineToPoint: CGPointMake(4.5, 35.5)];
+        [graphic1Path addLineToPoint: CGPointMake(21.5, 7.5)];
+        [graphic1Path closePath];
+        [color setStroke];
+        graphic1Path.lineWidth = 1;
+        [graphic1Path stroke];
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+- (UIImage *) successIconWithColor:(UIColor *)color {
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(40.0, 40.0), NO, 0.0);
+    
+    //// Bezier Drawing
+    UIBezierPath* bezierPath = UIBezierPath.bezierPath;
+    [bezierPath moveToPoint: CGPointMake(10.5, 20.5)];
+    [bezierPath addLineToPoint: CGPointMake(18.5, 28.5)];
+    [bezierPath addLineToPoint: CGPointMake(35.5, 12.5)];
+    bezierPath.lineCapStyle = kCGLineCapSquare;
+    
+    [color setStroke];
+    bezierPath.lineWidth = 1;
+    [bezierPath stroke];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end

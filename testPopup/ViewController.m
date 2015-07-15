@@ -48,7 +48,7 @@
     NSDate *date = [NSDate date];
     
     DMPopupItem *item = [DMPopupItem popupItemWithTitle:@"Test" andBody:[date description]];
-    item.type = DMPopupTypeInfo;
+    item.type = DMPopupTypeSuccess;
     
     [DMPopupAlert show:item inView:self.view];
 }
