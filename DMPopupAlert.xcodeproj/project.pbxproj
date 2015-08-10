@@ -14,7 +14,6 @@
 		189330F51B5508D60061BA52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189330F31B5508D60061BA52 /* Main.storyboard */; };
 		189330F71B5508D60061BA52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189330F61B5508D60061BA52 /* Images.xcassets */; };
 		189330FA1B5508D60061BA52 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189330F81B5508D60061BA52 /* LaunchScreen.xib */; };
-		189331061B5508D60061BA52 /* testPopupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189331051B5508D60061BA52 /* testPopupTests.m */; };
 		189331121B5509230061BA52 /* DMPopupAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 189331111B5509230061BA52 /* DMPopupAlert.m */; };
 		1893311B1B5509E00061BA52 /* DMPopupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893311A1B5509E00061BA52 /* DMPopupItem.m */; };
 		1893311E1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893311D1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m */; };
@@ -23,19 +22,9 @@
 		18E52EB21B56517800F92118 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E52EB11B56517800F92118 /* NSString+TextSize.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		189331001B5508D60061BA52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 189330DE1B5508D60061BA52 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 189330E51B5508D60061BA52;
-			remoteInfo = testPopup;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1856A6471B56720300726E45 /* PopupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupCell.xib; sourceTree = "<group>"; };
-		189330E61B5508D60061BA52 /* testPopup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPopup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		189330E61B5508D60061BA52 /* DMPopupAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMPopupAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189330EA1B5508D60061BA52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189330EB1B5508D60061BA52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		189330ED1B5508D60061BA52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,9 +34,6 @@
 		189330F41B5508D60061BA52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		189330F61B5508D60061BA52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		189330F91B5508D60061BA52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		189330FF1B5508D60061BA52 /* testPopupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testPopupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		189331041B5508D60061BA52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		189331051B5508D60061BA52 /* testPopupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testPopupTests.m; sourceTree = "<group>"; };
 		189331101B5509230061BA52 /* DMPopupAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPopupAlert.h; sourceTree = "<group>"; };
 		189331111B5509230061BA52 /* DMPopupAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPopupAlert.m; sourceTree = "<group>"; };
 		189331191B5509E00061BA52 /* DMPopupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPopupItem.h; sourceTree = "<group>"; };
@@ -69,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		189330FC1B5508D60061BA52 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,8 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1893310F1B55090E0061BA52 /* DMPopupAlert */,
-				189330E81B5508D60061BA52 /* testPopup */,
-				189331021B5508D60061BA52 /* testPopupTests */,
+				189330E81B5508D60061BA52 /* classes */,
 				189330E71B5508D60061BA52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,13 +70,12 @@
 		189330E71B5508D60061BA52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				189330E61B5508D60061BA52 /* testPopup.app */,
-				189330FF1B5508D60061BA52 /* testPopupTests.xctest */,
+				189330E61B5508D60061BA52 /* DMPopupAlert.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		189330E81B5508D60061BA52 /* testPopup */ = {
+		189330E81B5508D60061BA52 /* classes */ = {
 			isa = PBXGroup;
 			children = (
 				1856A6471B56720300726E45 /* PopupCell.xib */,
@@ -112,7 +89,7 @@
 				189330F81B5508D60061BA52 /* LaunchScreen.xib */,
 				189330E91B5508D60061BA52 /* Supporting Files */,
 			);
-			path = testPopup;
+			path = classes;
 			sourceTree = "<group>";
 		};
 		189330E91B5508D60061BA52 /* Supporting Files */ = {
@@ -120,23 +97,6 @@
 			children = (
 				189330EA1B5508D60061BA52 /* Info.plist */,
 				189330EB1B5508D60061BA52 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		189331021B5508D60061BA52 /* testPopupTests */ = {
-			isa = PBXGroup;
-			children = (
-				189331051B5508D60061BA52 /* testPopupTests.m */,
-				189331031B5508D60061BA52 /* Supporting Files */,
-			);
-			path = testPopupTests;
-			sourceTree = "<group>";
-		};
-		189331031B5508D60061BA52 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				189331041B5508D60061BA52 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,9 +129,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		189330E51B5508D60061BA52 /* testPopup */ = {
+		189330E51B5508D60061BA52 /* DMPopupAlert */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 189331091B5508D60061BA52 /* Build configuration list for PBXNativeTarget "testPopup" */;
+			buildConfigurationList = 189331091B5508D60061BA52 /* Build configuration list for PBXNativeTarget "DMPopupAlert" */;
 			buildPhases = (
 				189330E21B5508D60061BA52 /* Sources */,
 				189330E31B5508D60061BA52 /* Frameworks */,
@@ -181,28 +141,10 @@
 			);
 			dependencies = (
 			);
-			name = testPopup;
+			name = DMPopupAlert;
 			productName = testPopup;
-			productReference = 189330E61B5508D60061BA52 /* testPopup.app */;
+			productReference = 189330E61B5508D60061BA52 /* DMPopupAlert.app */;
 			productType = "com.apple.product-type.application";
-		};
-		189330FE1B5508D60061BA52 /* testPopupTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1893310C1B5508D60061BA52 /* Build configuration list for PBXNativeTarget "testPopupTests" */;
-			buildPhases = (
-				189330FB1B5508D60061BA52 /* Sources */,
-				189330FC1B5508D60061BA52 /* Frameworks */,
-				189330FD1B5508D60061BA52 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				189331011B5508D60061BA52 /* PBXTargetDependency */,
-			);
-			name = testPopupTests;
-			productName = testPopupTests;
-			productReference = 189330FF1B5508D60061BA52 /* testPopupTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -216,13 +158,9 @@
 					189330E51B5508D60061BA52 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					189330FE1B5508D60061BA52 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 189330E51B5508D60061BA52;
-					};
 				};
 			};
-			buildConfigurationList = 189330E11B5508D60061BA52 /* Build configuration list for PBXProject "testPopup" */;
+			buildConfigurationList = 189330E11B5508D60061BA52 /* Build configuration list for PBXProject "DMPopupAlert" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -235,8 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				189330E51B5508D60061BA52 /* testPopup */,
-				189330FE1B5508D60061BA52 /* testPopupTests */,
+				189330E51B5508D60061BA52 /* DMPopupAlert */,
 			);
 		};
 /* End PBXProject section */
@@ -251,13 +188,6 @@
 				189331201B550D600061BA52 /* DMPopupAlertTableViewCell.xib in Resources */,
 				189330F71B5508D60061BA52 /* Images.xcassets in Resources */,
 				1856A6481B56720300726E45 /* PopupCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		189330FD1B5508D60061BA52 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,23 +209,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		189330FB1B5508D60061BA52 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				189331061B5508D60061BA52 /* testPopupTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		189331011B5508D60061BA52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 189330E51B5508D60061BA52 /* testPopup */;
-			targetProxy = 189331001B5508D60061BA52 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		189330F31B5508D60061BA52 /* Main.storyboard */ = {
@@ -403,9 +317,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = testPopup/Info.plist;
+				INFOPLIST_FILE = classes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DMPopupAlert;
 			};
 			name = Debug;
 		};
@@ -413,50 +327,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = testPopup/Info.plist;
+				INFOPLIST_FILE = classes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		1893310D1B5508D60061BA52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = testPopupTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testPopup.app/testPopup";
-			};
-			name = Debug;
-		};
-		1893310E1B5508D60061BA52 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = testPopupTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/testPopup.app/testPopup";
+				PRODUCT_NAME = DMPopupAlert;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		189330E11B5508D60061BA52 /* Build configuration list for PBXProject "testPopup" */ = {
+		189330E11B5508D60061BA52 /* Build configuration list for PBXProject "DMPopupAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				189331071B5508D60061BA52 /* Debug */,
@@ -465,20 +345,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		189331091B5508D60061BA52 /* Build configuration list for PBXNativeTarget "testPopup" */ = {
+		189331091B5508D60061BA52 /* Build configuration list for PBXNativeTarget "DMPopupAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1893310A1B5508D60061BA52 /* Debug */,
 				1893310B1B5508D60061BA52 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1893310C1B5508D60061BA52 /* Build configuration list for PBXNativeTarget "testPopupTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1893310D1B5508D60061BA52 /* Debug */,
-				1893310E1B5508D60061BA52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
