@@ -152,7 +152,10 @@
     // register nib
     UINib *nib = [DMPopupManager sharedInstance].registredNib;
     if (nib == nil) {
-        nib = [UINib nibWithNibName:@"DMPopupAlertTableViewCell" bundle:nil];
+        NSURL *bundlePath = [[NSBundle bundleForClass:[self class]] URLForResource:@"DMPopupAlert" withExtension:@"bundle"];
+        NSBundle *bundle = [NSBundle bundleWithURL:bundlePath];
+        
+        nib = [UINib nibWithNibName:@"DMPopupAlertTableViewCell" bundle:bundle];
     }
     [tableView registerNib:nib forCellReuseIdentifier:DMPopupAlertTableViewCell_ID];
     

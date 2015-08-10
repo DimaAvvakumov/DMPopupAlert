@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1856A6481B56720300726E45 /* PopupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1856A6471B56720300726E45 /* PopupCell.xib */; };
+		188F215B1B7897A400E42BE9 /* DMPopupAlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F215A1B7897A400E42BE9 /* DMPopupAlertTableViewCell.xib */; };
+		188F215D1B7897C300E42BE9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188F215C1B7897C300E42BE9 /* CoreFoundation.framework */; };
+		188F21611B78993100E42BE9 /* DMPopupAlert.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 188F21601B78993100E42BE9 /* DMPopupAlert.bundle */; };
 		189330EC1B5508D60061BA52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189330EB1B5508D60061BA52 /* main.m */; };
 		189330EF1B5508D60061BA52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189330EE1B5508D60061BA52 /* AppDelegate.m */; };
 		189330F21B5508D60061BA52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189330F11B5508D60061BA52 /* ViewController.m */; };
@@ -17,13 +20,17 @@
 		189331121B5509230061BA52 /* DMPopupAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 189331111B5509230061BA52 /* DMPopupAlert.m */; };
 		1893311B1B5509E00061BA52 /* DMPopupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893311A1B5509E00061BA52 /* DMPopupItem.m */; };
 		1893311E1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893311D1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m */; };
-		189331201B550D600061BA52 /* DMPopupAlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1893311F1B550D600061BA52 /* DMPopupAlertTableViewCell.xib */; };
 		189331231B550E910061BA52 /* DMPopupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 189331221B550E910061BA52 /* DMPopupManager.m */; };
 		18E52EB21B56517800F92118 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E52EB11B56517800F92118 /* NSString+TextSize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1856A6471B56720300726E45 /* PopupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupCell.xib; sourceTree = "<group>"; };
+		188F21531B78977400E42BE9 /* DMPopupAlertBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMPopupAlertBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		188F21561B78977400E42BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		188F215A1B7897A400E42BE9 /* DMPopupAlertTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMPopupAlertTableViewCell.xib; sourceTree = "<group>"; };
+		188F215C1B7897C300E42BE9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		188F21601B78993100E42BE9 /* DMPopupAlert.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DMPopupAlert.bundle; sourceTree = "<group>"; };
 		189330E61B5508D60061BA52 /* DMPopupAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMPopupAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189330EA1B5508D60061BA52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189330EB1B5508D60061BA52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,7 +47,6 @@
 		1893311A1B5509E00061BA52 /* DMPopupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPopupItem.m; sourceTree = "<group>"; };
 		1893311C1B550D4B0061BA52 /* DMPopupAlertTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPopupAlertTableViewCell.h; sourceTree = "<group>"; };
 		1893311D1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPopupAlertTableViewCell.m; sourceTree = "<group>"; };
-		1893311F1B550D600061BA52 /* DMPopupAlertTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMPopupAlertTableViewCell.xib; sourceTree = "<group>"; };
 		189331211B550E910061BA52 /* DMPopupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPopupManager.h; sourceTree = "<group>"; };
 		189331221B550E910061BA52 /* DMPopupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPopupManager.m; sourceTree = "<group>"; };
 		18E52EB01B56517800F92118 /* NSString+TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextSize.h"; sourceTree = "<group>"; };
@@ -48,6 +54,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		188F21501B78977400E42BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				188F215D1B7897C300E42BE9 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		189330E31B5508D60061BA52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,11 +72,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188F21541B78977400E42BE9 /* DMPopupAlertBundle */ = {
+			isa = PBXGroup;
+			children = (
+				188F21551B78977400E42BE9 /* Supporting Files */,
+			);
+			path = DMPopupAlertBundle;
+			sourceTree = "<group>";
+		};
+		188F21551B78977400E42BE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				188F21561B78977400E42BE9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		189330DD1B5508D60061BA52 = {
 			isa = PBXGroup;
 			children = (
+				188F215C1B7897C300E42BE9 /* CoreFoundation.framework */,
 				1893310F1B55090E0061BA52 /* DMPopupAlert */,
 				189330E81B5508D60061BA52 /* classes */,
+				188F21541B78977400E42BE9 /* DMPopupAlertBundle */,
 				189330E71B5508D60061BA52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				189330E61B5508D60061BA52 /* DMPopupAlert.app */,
+				188F21531B78977400E42BE9 /* DMPopupAlertBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,9 +143,10 @@
 				189331111B5509230061BA52 /* DMPopupAlert.m */,
 				1893311C1B550D4B0061BA52 /* DMPopupAlertTableViewCell.h */,
 				1893311D1B550D4B0061BA52 /* DMPopupAlertTableViewCell.m */,
-				1893311F1B550D600061BA52 /* DMPopupAlertTableViewCell.xib */,
 				189331211B550E910061BA52 /* DMPopupManager.h */,
 				189331221B550E910061BA52 /* DMPopupManager.m */,
+				188F21601B78993100E42BE9 /* DMPopupAlert.bundle */,
+				188F215A1B7897A400E42BE9 /* DMPopupAlertTableViewCell.xib */,
 			);
 			path = DMPopupAlert;
 			sourceTree = "<group>";
@@ -129,6 +163,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		188F21521B78977400E42BE9 /* DMPopupAlertBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 188F21571B78977400E42BE9 /* Build configuration list for PBXNativeTarget "DMPopupAlertBundle" */;
+			buildPhases = (
+				188F214F1B78977400E42BE9 /* Sources */,
+				188F21501B78977400E42BE9 /* Frameworks */,
+				188F21511B78977400E42BE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DMPopupAlertBundle;
+			productName = DMPopupAlertBundle;
+			productReference = 188F21531B78977400E42BE9 /* DMPopupAlertBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		189330E51B5508D60061BA52 /* DMPopupAlert */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 189331091B5508D60061BA52 /* Build configuration list for PBXNativeTarget "DMPopupAlert" */;
@@ -155,6 +206,9 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Avvakumov Dmitry";
 				TargetAttributes = {
+					188F21521B78977400E42BE9 = {
+						CreatedOnToolsVersion = 6.4;
+					};
 					189330E51B5508D60061BA52 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -174,18 +228,27 @@
 			projectRoot = "";
 			targets = (
 				189330E51B5508D60061BA52 /* DMPopupAlert */,
+				188F21521B78977400E42BE9 /* DMPopupAlertBundle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		188F21511B78977400E42BE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				188F215B1B7897A400E42BE9 /* DMPopupAlertTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		189330E41B5508D60061BA52 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				189330F51B5508D60061BA52 /* Main.storyboard in Resources */,
+				188F21611B78993100E42BE9 /* DMPopupAlert.bundle in Resources */,
 				189330FA1B5508D60061BA52 /* LaunchScreen.xib in Resources */,
-				189331201B550D600061BA52 /* DMPopupAlertTableViewCell.xib in Resources */,
 				189330F71B5508D60061BA52 /* Images.xcassets in Resources */,
 				1856A6481B56720300726E45 /* PopupCell.xib in Resources */,
 			);
@@ -194,6 +257,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		188F214F1B78977400E42BE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		189330E21B5508D60061BA52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +301,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		188F21581B78977400E42BE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DMPopupAlertBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		188F21591B78977400E42BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DMPopupAlertBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		189331071B5508D60061BA52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -336,6 +439,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		188F21571B78977400E42BE9 /* Build configuration list for PBXNativeTarget "DMPopupAlertBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188F21581B78977400E42BE9 /* Debug */,
+				188F21591B78977400E42BE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		189330E11B5508D60061BA52 /* Build configuration list for PBXProject "DMPopupAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
