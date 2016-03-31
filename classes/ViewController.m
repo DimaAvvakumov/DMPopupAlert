@@ -30,7 +30,7 @@
     
     DMPopupItem *item = [DMPopupItem popupItemWithTitle:@"Ошибка" body:@"In the Block-specific code above, you might wonder what the “stop” variabl is. This is simply a variable that can be set to YES from within the block to stop further processing. This parameter is specified as part of the block to be used by the enumerateObjectsUsingBlock method. \nThe above is a pretty trivial example and it might be admittedly difficult to see the advantage of Blocks in this case. But there are two things I want to point out about the Blocks approach:" type:DMPopupTypeError duration:10.0];
     
-    [DMPopupAlert show:item inView:self.view];
+    [DMPopupAlert show:item inController:self];
 }
 
 - (IBAction)warningAction:(id)sender {
@@ -38,7 +38,7 @@
     
     DMPopupItem *item = [DMPopupItem popupItemWithTitle:@"Внимание!" body:[date description] type:DMPopupTypeWarning duration:10.0];
     
-    [DMPopupAlert show:item inView:self.view];
+    [DMPopupAlert show:item inController:self];
 }
 
 - (IBAction)successAction:(id)sender {
@@ -53,7 +53,7 @@
         
     };
     
-    [DMPopupAlert show:item inView:self.view];
+    [DMPopupAlert show:item inController:self];
 }
 
 @end

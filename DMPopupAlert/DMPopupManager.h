@@ -20,6 +20,7 @@
 +(DMPopupManager *) sharedInstance;
 
 - (DMPopupAlert *)popupAlertForView:(UIView*)view;
+- (DMPopupAlert *)popupAlertForController:(UIViewController*)viewController;
 
 #pragma mark - Appereance
 

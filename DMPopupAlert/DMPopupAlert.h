@@ -14,8 +14,10 @@
 @interface DMPopupAlert : NSObject
 
 - (DMPopupAlert*)initWithView:(UIView*)view;
+- (DMPopupAlert*)initWithController:(UIViewController*)viewController;
 
 + (void)show:(DMPopupItem *)item inView:(UIView *)view;
++ (void)show:(DMPopupItem *)item inController:(UIViewController *)viewController;
 
 + (void)setCalculateHeightBlock:(DMPopupAlertHeightBlock)block;
 

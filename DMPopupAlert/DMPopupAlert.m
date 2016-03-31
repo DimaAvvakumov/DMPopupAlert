@@ -14,6 +14,8 @@
 
 @interface DMPopupAlert() <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) UIViewController *backingController;
+
 @property (strong, nonatomic) UIView *view;
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSLayoutConstraint *tableViewHeightConstraint;
@@ -32,8 +34,27 @@
     self = [super init];
     if (!self) return nil;
     
+    self.backingController = nil;
     self.view = view;
     
+    [self initView];
+    
+    return self;
+}
+
+- (DMPopupAlert*)initWithController:(UIViewController *)viewController {
+    self = [super init];
+    if (!self) return nil;
+    
+    self.backingController = viewController;
+    self.view = viewController.view;
+    
+    [self initView];
+    
+    return self;
+}
+
+- (void)initView {
     [self createTableView];
     
     // table data item
@@ -41,8 +62,6 @@
     
     // table height
     self.totalTableHeight = 0.0;
-    
-    return self;
 }
 
 #pragma mark - Shared instance
@@ -51,6 +70,12 @@
     DMPopupAlert *popupAlert = [[DMPopupManager sharedInstance] popupAlertForView:view];
     
     [popupAlert _show:item inView:view];
+}
+
++ (void)show:(DMPopupItem *)item inController:(UIViewController *)viewController {
+    DMPopupAlert *popupAlert = [[DMPopupManager sharedInstance] popupAlertForController:viewController];
+    
+    [popupAlert _show:item inView:viewController.view];
 }
 
 #pragma mark - Instance methods
@@ -162,13 +187,26 @@
     // add to view
     [self.view addSubview:tableView];
     
-    // add constraints
+    // add left & right constraints
     [self.view addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"H:|[tableView]|"
                                options:0
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(tableView)]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0]];
+    
+    // top constraint
+    {
+        NSLayoutConstraint *constraint;
+        if (_backingController) {
+            id<UILayoutSupport> topGuide = _backingController.topLayoutGuide;
+            constraint = [NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:topGuide attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
+        } else {
+            constraint = [NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+        }
+        
+        [self.view addConstraint:constraint];
+    }
+    
     self.tableViewHeightConstraint = [NSLayoutConstraint constraintWithItem:tableView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:10.0];
     [tableView addConstraint:self.tableViewHeightConstraint];
     

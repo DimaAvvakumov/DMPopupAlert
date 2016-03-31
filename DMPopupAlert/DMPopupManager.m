@@ -60,6 +60,24 @@
     return popupAlert;
 }
 
+- (DMPopupAlert *)popupAlertForController:(UIViewController*)viewController {
+    UIView *view = viewController.view;
+    NSString *viewKey = [NSString stringWithFormat:@"%p",view];
+    
+    // DMPopupAlert
+    DMPopupAlert *popupAlert = [self.sharedPops objectForKey:viewKey];
+    
+    if (popupAlert == nil) {
+        // create
+        popupAlert = [[DMPopupAlert alloc] initWithController:viewController];
+        
+        // store
+        [self.sharedPops setObject:popupAlert forKey:viewKey];
+    }
+    
+    return popupAlert;
+}
+
 #pragma mark - Appereance
 
 + (NSString *)keyForParam:(NSString *)paramName andType:(DMPopupType)popupType {
